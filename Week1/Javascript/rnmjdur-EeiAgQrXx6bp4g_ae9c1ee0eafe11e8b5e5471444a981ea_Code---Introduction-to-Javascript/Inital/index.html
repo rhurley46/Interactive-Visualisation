@@ -1,0 +1,39 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+</body>
+<script>
+const KG_PER_LB = 0.45;
+const INCH_TO_METRE = 0.254;
+	
+	let client = {
+	Name : 'Rory',
+	Weight : 190,
+	Height : 100	
+	}
+
+	let client_2 = {
+	Name:"Joe",
+	Weight:95,
+	Height : 178
+	}
+
+
+	function getBMI(client) {
+	let Weight_kg = client.Weight * KG_PER_LB;
+	let Height_m = client.Height * INCH_TO_METRE;
+	
+	let BMI = Weight_kg / Height_m / Height_m
+	return BMI
+	}
+
+	document.write(client.Name + ": " + getBMI(client))
+	document.write(client_2.Name + ": " + getBMI(client_2))
+
+
+</script>
+</html>

@@ -1,0 +1,49 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+</body>
+<script>
+const KG_PER_LB = 0.45;
+const INCH_TO_METRE = 0.254;
+    
+    let clients = [
+        {
+            Name : 'Rory',
+            Weight : 190,
+            Height : 100    
+        },
+        {
+            Name:"Joe",
+            Weight:95,
+            Height : 178
+        },
+        {
+            Name:"James",
+            Weight:97,
+            Height : 185
+        }
+    ]
+
+
+    function getBMI(client) {
+    let Weight_kg = client.Weight * KG_PER_LB;
+    let Height_m = client.Height * INCH_TO_METRE;
+    
+    let BMI = Weight_kg / Height_m / Height_m
+    return BMI
+    }
+
+    for (let i = 0; i < clients.length; i++){
+        let client = clients[i];
+        let bmi = getBMI(client)
+        if (bmi > 0.01){ 
+        document.write(client.Name + ": " + bmi + "</br>")
+        }
+    }
+
+</script>
+</html>
