@@ -35,6 +35,7 @@
         }
 
     </style>
+    <script src="d3.js"></script>
 </head>
 
 <body>
@@ -50,5 +51,18 @@
         </div>
     </div>
 </body>
+
+ <script>
+    let store = {}
+
+    function loadData() {
+    let promise = d3.csv('data.csv') //TODO 1: Add the code to load the CSV file named "routes.csv" | 1 Line
+    return promise.then(routes => {
+        store.routes = store.append("div").text(text)
+        return store;
+    })
+}
+
+ </script>
 
 </html>
